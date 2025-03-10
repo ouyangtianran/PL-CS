@@ -1,9 +1,8 @@
-# PL-CFE
+# PL-CS
 Implementation code for
 
-[Semantic-Aware Pseudo-Labeling for Unsupervised Meta-Learning]
-<!-- (https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136800160.pdf).
-In Proceedings of the European Conference on Computer Vision (ECCV), 2022. -->
+[Semantic-Aware Pseudo-Labeling for Unsupervised Meta-Learning](coming soon).
+In IEEE Transactions on Pattern Analysis and Machine Intelligence.
 
 By Tianran Ouyang, Xingping Dong, Mang Ye, Bo Du, Ling Shao and Jianbing Shen.
 
