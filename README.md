@@ -67,14 +67,14 @@ cd ..
 ```
 ### Usage
 We provide shell scripts in ['scripts](scripts) to reproduce our results.
-Here, we provide the procedure to train a model on omniglot. (Similar precedure for other datasets)
+Here, we provide the procedure to train a model on mini-imagenet. (Similar precedure for other datasets)
 #### Step 1: Unsupervised training model with our CFE (multiple GPUs)
 
 Notice that this step requires multiple GPUs. 
 If you use one GPU for training, you may suffer from performance degradation
 ```bash
 cd scripts
-bash train_cfe_omni.sh
+bash train_cfe_imagenet.sh
 # For miniImagenet, please download the ImageNet and then modify the dir_imagenet in train_cfe_mini
 # bash train_cfe_imagenet
 ```
@@ -85,11 +85,11 @@ Please do data transform in this step. In the following steps, we would not do a
 We also provide a script as following. Please modify $pretrain_path to select the embedding model.
 We provide the pre-trained model in [Google Drive](https://drive.google.com/drive/folders/1veOQ8SfwwMqohfBsJ2kkc4fANDvg7107?usp=sharing)
 ```bash
-bash cfe_encoding.sh
+bash cfe_encoding_mini.sh
 ```
 #### Step 3: Run the supervised method, such as MAML, on the pseudo labeling dataset based on clustering in our CFE embedding. The semantic-aware pseudo-label filtering process is systematically implemented during this phase.
 ```bash
-bash aug-omni-maml-pem-traintest.sh
+bash aug-mini-maml-pem-traintest.sh
 ```
 Please refer 'EP/scripts' to evaluate the EP method.
 ### Acknowledgement
